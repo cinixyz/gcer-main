@@ -1,7 +1,11 @@
 #include <LineFollowing.h>
 
-double rightTarget = 2890; // Gray Color = 2750
-double leftTarget = 2950; //  Gray Color = 2760
+/*
+ * Gray L: 2750
+ * Gray R: 2760
+ */
+double rightTarget = 2890;
+double leftTarget = 2950;
 
 double outMin,outMax;
 
@@ -15,8 +19,7 @@ void getSensorVal() {
         printf("Right: %d\n", rfront);
     }
 }
-void SetOutputLimits(double Min, double Max)
-{
+void SetOutputLimits(double Min, double Max) {
     if (Min > Max) return;
     outMin = Min;
     outMax = Max;
@@ -36,7 +39,6 @@ void pi_LineFollow(int inputDistance_cm, int speed, int delay) {
     double leftIntegral = 0;
 
     double dspeed = (double)speed;
-    //double turner = 1.0;
 
     SetOutputLimits(dspeed-70,dspeed+70);
 
@@ -62,7 +64,7 @@ void pi_LineFollow(int inputDistance_cm, int speed, int delay) {
         if (leftIntegral > outMax) leftIntegral = outMax;
         else if(leftIntegral < outMin) leftIntegral = outMin;
 
-        if (rightProportional > outMax) rightProportional = outMax;
+        if (rightProportional > outMax) rightProportional = outMax; WTFFFFFFFFFFFFFFFFF
         else if(rightProportional < outMin) rightProportional = outMin;
         if (leftProportional > outMax) leftProportional = outMax;
         else if(leftProportional < outMin) leftProportional = outMin;

@@ -38,11 +38,9 @@ void moveElevatorByClicks(int requiredClicks, int speed)
             set_servo_position(LATCH_SERVO, LATCH_CLOSE_POSITION);
             buttonPressed = true;
             requiredClicks--;
-            //msleep(100);
             printf("required Clicks minused\n");
         }
         printf("required clicks: %i\n", requiredClicks);
-        //msleep(10);
     }
 
     ao();

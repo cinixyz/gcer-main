@@ -39,17 +39,6 @@ void hardwareTestActivate() {
         if (CLICKER == 1) printf("TRUE\n\n");
         else if (CLICKER != 1) printf("FALSE\n\n");
         
-        /* not yet implemented --- needs to add state check feature
-		if (INCREASE_ELEVATOR_SPEED){
-    		elevatorSpeed-=ELEVATOR_SPEED_INCREMENT;
-        	msleep(500);
-		}
-      
-		else if (REDUCE_ELEVATOR_SPEED){
-        	elevatorSpeed-=ELEVATOR_SPEED_INCREMENT;
-        	msleep(500);
-		}*/
-
 		if (GO_UP) {
             if (!elevatorActivated) lastMotorPos = gmpc(LOWER_MOTOR);
 			elevatorActivated = true;

@@ -1,6 +1,7 @@
 # main gcer code for big bot
 code used in gcer 2018-19
-collaborators:
+
+### collaborators:
 * maxine l
 * justin m
 * kyle m
